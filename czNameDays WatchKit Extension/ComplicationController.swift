@@ -88,6 +88,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
 
     func requestedUpdateDidBegin() {
+        // When next refresh is triggered (with getNextRequestedUpdateDateWithHandler) , I need to reload complication data.
         let server = CLKComplicationServer.sharedInstance()
         for complication in server.activeComplications {
             server.reloadTimelineForComplication(complication)
@@ -95,6 +96,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     }
 
     static func extendComplications() {
+        // Extend timeline
         let server = CLKComplicationServer.sharedInstance()
         for complication in server.activeComplications {
             server.extendTimelineForComplication(complication)
