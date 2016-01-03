@@ -12,7 +12,7 @@ class NameDays {
 
     func getNameDay(offset: Int = 0, long: Bool = false) -> String {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "M-dd"
+        dateFormatter.dateFormat = "MM-dd"
         let interval = Double(offset)*24*60*60
         let code = dateFormatter.stringFromDate(NSDate(timeIntervalSinceNow: interval))
         if (long) {
@@ -25,7 +25,7 @@ class NameDays {
     
     func getNameDayByDate(date: NSDate) -> String {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "M-dd"
+        dateFormatter.dateFormat = "MM-dd"
         let code = dateFormatter.stringFromDate(date)
         return self.nameDays[code]![0]
     }
@@ -36,7 +36,7 @@ class NameDays {
         "01-03": ["Radmila"],
         "01-04": ["Diana"],
         "01-05": ["Dalimil"],
-        "01-06": ["Tři králové"],
+        "01-06": ["3 králové", "Tři králové"],
         "01-07": ["Vilma"],
         "01-08": ["Čestmír"],
         "01-09": ["Vladan"],
