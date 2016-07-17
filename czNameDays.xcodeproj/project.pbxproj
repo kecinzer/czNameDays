@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED13FDFD1C9A902C0072B301 /* NameDays.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED13FDFC1C9A902C0072B301 /* NameDays.plist */; };
 		ED551D541C161F9A0046F9F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED551D531C161F9A0046F9F3 /* AppDelegate.swift */; };
 		ED551D561C161F9A0046F9F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED551D551C161F9A0046F9F3 /* ViewController.swift */; };
 		ED551D591C161F9A0046F9F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED551D571C161F9A0046F9F3 /* Main.storyboard */; };
@@ -30,6 +31,8 @@
 		EDD0570A1C18B6B400F3E6AF /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD057021C18B6B400F3E6AF /* 180.png */; };
 		EDD0570B1C18B6B400F3E6AF /* 196.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD057031C18B6B400F3E6AF /* 196.png */; };
 		EDD0570C1C18B6B400F3E6AF /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = EDD057041C18B6B400F3E6AF /* iTunesArtwork.png */; };
+		EDDE6A701CB683A600B09D22 /* NameDays.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED13FDFC1C9A902C0072B301 /* NameDays.plist */; };
+		EDDE6A711CB683AA00B09D22 /* NameDays.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED13FDFC1C9A902C0072B301 /* NameDays.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED11CC541CE87287004B56B1 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Main.strings; sourceTree = "<group>"; };
+		ED11CC551CE87287004B56B1 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		ED11CC561CE87287004B56B1 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Interface.strings; sourceTree = "<group>"; };
+		ED13FDFC1C9A902C0072B301 /* NameDays.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NameDays.plist; sourceTree = "<group>"; };
 		ED551D501C161F9A0046F9F3 /* České svátky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "České svátky.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED551D531C161F9A0046F9F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED551D551C161F9A0046F9F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +137,7 @@
 				ED551D511C161F9A0046F9F3 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		ED551D511C161F9A0046F9F3 /* Products */ = {
 			isa = PBXGroup;
@@ -159,6 +167,7 @@
 				ED551D5C1C161F9A0046F9F3 /* LaunchScreen.storyboard */,
 				ED551D5F1C161F9A0046F9F3 /* Info.plist */,
 				ED551D8E1C161FE30046F9F3 /* NameDays.swift */,
+				ED13FDFC1C9A902C0072B301 /* NameDays.plist */,
 			);
 			path = czNameDays;
 			sourceTree = "<group>";
@@ -266,7 +275,7 @@
 				};
 			};
 			buildConfigurationList = ED551D4B1C161F990046F9F3 /* Build configuration list for PBXProject "czNameDays" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -300,6 +309,7 @@
 				EDD057091C18B6B400F3E6AF /* 172.png in Resources */,
 				EDD057081C18B6B400F3E6AF /* 120.png in Resources */,
 				EDD057051C18B6B400F3E6AF /* 58.png in Resources */,
+				ED13FDFD1C9A902C0072B301 /* NameDays.plist in Resources */,
 				ED551D591C161F9A0046F9F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED551D6B1C161F9A0046F9F3 /* Assets.xcassets in Resources */,
+				EDDE6A711CB683AA00B09D22 /* NameDays.plist in Resources */,
 				ED551D691C161F9A0046F9F3 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDE6A701CB683A600B09D22 /* NameDays.plist in Resources */,
 				ED551D7F1C161F9A0046F9F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,6 +377,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ED551D581C161F9A0046F9F3 /* Base */,
+				ED11CC541CE87287004B56B1 /* cs */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -373,6 +386,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ED551D5D1C161F9A0046F9F3 /* Base */,
+				ED11CC551CE87287004B56B1 /* cs */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -381,6 +395,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ED551D681C161F9A0046F9F3 /* Base */,
+				ED11CC561CE87287004B56B1 /* cs */,
 			);
 			name = Interface.storyboard;
 			sourceTree = "<group>";
@@ -424,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -463,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -475,10 +490,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "czNameDays WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kecinzer.czNameDays.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -490,10 +508,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "czNameDays WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kecinzer.czNameDays.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -505,11 +526,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = czNameDays_WatchKit_Extension;
 				INFOPLIST_FILE = "czNameDays WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = kecinzer.czNameDays.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -521,11 +545,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = czNameDays_WatchKit_Extension;
 				INFOPLIST_FILE = "czNameDays WatchKit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = kecinzer.czNameDays.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Svátek-->
+        <!--Name day-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller title="Svátek" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="czNameDays_WatchKit_App" customModuleProvider="target">
+                <controller title="Name day" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="czNameDays_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="left" text="Svátek má" textAlignment="left" id="L1J-Xc-B3y">
+                        <label alignment="left" text="Today" textAlignment="left" id="L1J-Xc-B3y">
                             <color key="textColor" red="0.61176470588235299" green="0.058823529411764705" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="italicSystem" pointSize="12"/>
                         </label>
                         <label alignment="left" text="Label" textAlignment="left" numberOfLines="2" id="22D-rp-bBE" userLabel="today">
                             <fontDescription key="font" type="system" weight="medium" pointSize="15"/>
                         </label>
-                        <label alignment="left" text="Zítra" textAlignment="left" id="8SC-Tl-Es2">
+                        <label alignment="left" text="Tomorrow" textAlignment="left" id="8SC-Tl-Es2">
                             <color key="textColor" red="0.61176470589999998" green="0.058823529409999999" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="italicSystem" pointSize="12"/>
                         </label>
                         <label alignment="left" text="Label" textAlignment="left" numberOfLines="2" id="edm-mq-HLd" userLabel="tomorrow">
                             <fontDescription key="font" type="system" pointSize="14"/>
                         </label>
-                        <label alignment="left" text="Pozítří" textAlignment="left" id="cJB-O7-kB9">
+                        <label alignment="left" text="Day after tomorrow" textAlignment="left" id="cJB-O7-kB9">
                             <color key="textColor" red="0.61176470589999998" green="0.058823529409999999" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" type="italicSystem" pointSize="12"/>
                         </label>

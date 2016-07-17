@@ -1,0 +1,21 @@
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "22D-rp-bBE"; */
+"22D-rp-bBE.text" = "Label";
+
+/* Class = "WKInterfaceLabel"; text = "Tomorrow"; ObjectID = "8SC-Tl-Es2"; */
+"8SC-Tl-Es2.text" = "Zítra";
+
+/* Class = "WKInterfaceController"; title = "Name day"; ObjectID = "AgC-eL-Hgc"; */
+"AgC-eL-Hgc.title" = "Svátek má";
+
+/* Class = "WKInterfaceLabel"; text = "Today"; ObjectID = "L1J-Xc-B3y"; */
+"L1J-Xc-B3y.text" = "Dnes";
+
+/* Class = "WKInterfaceLabel"; text = "Day after tomorrow"; ObjectID = "cJB-O7-kB9"; */
+"cJB-O7-kB9.text" = "Pozítří";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "edm-mq-HLd"; */
+"edm-mq-HLd.text" = "Label";
+
+/* Class = "WKInterfaceLabel"; text = "Label"; ObjectID = "xXb-po-IlA"; */
+"xXb-po-IlA.text" = "Label";

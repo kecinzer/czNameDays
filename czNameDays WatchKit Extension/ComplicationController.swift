@@ -13,12 +13,23 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
     let ND = NameDays()
     
-    func timelineEntryForDate(date: NSDate) -> CLKComplicationTimelineEntry {
-        let template = CLKComplicationTemplateUtilitarianSmallFlat()
+    func timelineEntryForDate(complication: CLKComplication, date: NSDate) -> CLKComplicationTimelineEntry {
         let cal = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-        template.textProvider = CLKSimpleTextProvider(text: ND.getNameDayByDate(date))
-
-        return CLKComplicationTimelineEntry(date: cal.startOfDayForDate(date), complicationTemplate: template)
+        var template: CLKComplicationTemplate? = nil
+        switch complication.family {
+        case .UtilitarianSmall:
+            let utilitarianSmallTemplate = CLKComplicationTemplateUtilitarianSmallFlat()
+            utilitarianSmallTemplate.textProvider = CLKSimpleTextProvider(text: ND.getNameDayByDate(date))
+            template = utilitarianSmallTemplate
+        case .ModularSmall:
+            let modularSmallTemplate = CLKComplicationTemplateModularSmallStackText()
+            modularSmallTemplate.line1TextProvider = CLKSimpleTextProvider(text: ND.getNameDayByDate(date))
+            modularSmallTemplate.line2TextProvider = CLKSimpleTextProvider(text: ND.getNameDayByDate(date.dateByAddingTimeInterval(1*24*60*60)))
+            template = modularSmallTemplate
+        default:
+            template = nil
+        }
+        return CLKComplicationTimelineEntry(date: cal.startOfDayForDate(date), complicationTemplate: template!)
     }
     
     // MARK: - Timeline Configuration
@@ -48,8 +59,8 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
         // Call the handler with the current timeline entry
         switch complication.family {
-        case .UtilitarianSmall:
-            handler(timelineEntryForDate(NSDate()))
+        case .UtilitarianSmall, .ModularSmall:
+            handler(timelineEntryForDate(complication, date: NSDate()))
         default:
             handler(nil)
         }
@@ -57,12 +68,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
         // Call the handler with the timeline entries prior to the given date
-        handler([timelineEntryForDate(NSDate(timeIntervalSinceNow: -1*24*60*60))])
+        handler([timelineEntryForDate(complication, date: NSDate(timeIntervalSinceNow: -1*24*60*60))])
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
         // Call the handler with the timeline entries after to the given date
-        handler([timelineEntryForDate(NSDate(timeIntervalSinceNow: 1*24*60*60))])
+        handler([timelineEntryForDate(complication, date: NSDate(timeIntervalSinceNow: 1*24*60*60))])
     }
     
     // MARK: - Update Scheduling
@@ -82,6 +93,11 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
             let utilitarianSmallTemplate = CLKComplicationTemplateUtilitarianSmallFlat()
             utilitarianSmallTemplate.textProvider = CLKSimpleTextProvider(text: ND.getNameDay())
             handler(utilitarianSmallTemplate)
+        case .ModularSmall:
+            let modularSmallTemplate = CLKComplicationTemplateModularSmallStackText()
+            modularSmallTemplate.line1TextProvider = CLKSimpleTextProvider(text: ND.getNameDay())
+            modularSmallTemplate.line2TextProvider = CLKSimpleTextProvider(text: ND.getNameDay(1))
+            handler(modularSmallTemplate)
         default:
             handler(nil)
         }
@@ -90,7 +106,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func requestedUpdateDidBegin() {
         // When next refresh is triggered (with getNextRequestedUpdateDateWithHandler) , I need to reload complication data.
         let server = CLKComplicationServer.sharedInstance()
-        for complication in server.activeComplications {
+        for complication in server.activeComplications! {
             server.reloadTimelineForComplication(complication)
         }
     }
@@ -98,7 +114,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     static func extendComplications() {
         // Extend timeline
         let server = CLKComplicationServer.sharedInstance()
-        for complication in server.activeComplications {
+        for complication in server.activeComplications! {
             server.extendTimelineForComplication(complication)
         }
     }
