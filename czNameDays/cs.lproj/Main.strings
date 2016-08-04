@@ -1,3 +1,21 @@
 
-/* Class = "UILabel"; text = "This is only launcher for Apple Watch application."; ObjectID = "PRx-rQ-H3E"; */
-"PRx-rQ-H3E.text" = "Toto je pouze launcher pro aplikaci na hodinkách.";
+/* Class = "UILabel"; text = "Today"; ObjectID = "CMJ-3c-7LZ"; */
+"CMJ-3c-7LZ.text" = "Dnes";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "O7A-nZ-IYN"; */
+"O7A-nZ-IYN.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "QIZ-GG-hmA"; */
+"QIZ-GG-hmA.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SbK-dW-cMS"; */
+"SbK-dW-cMS.text" = "Label";
+
+/* Class = "UILabel"; text = "Tomorrow"; ObjectID = "rsR-f6-JuH"; */
+"rsR-f6-JuH.text" = "Zítra";
+
+/* Class = "UILabel"; text = "Name day"; ObjectID = "xXf-cZ-bTU"; */
+"xXf-cZ-bTU.text" = "Svátek mají";
+
+/* Class = "UILabel"; text = "Day after tomorrow"; ObjectID = "zs4-9k-RsI"; */
+"zs4-9k-RsI.text" = "Pozítří";
